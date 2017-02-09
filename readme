@@ -1,0 +1,7 @@
+############## Read Me  ##############
+
+Install Type Script Package if you don't have.
+
+git clone https://github.com/rknoulakha/anglr-2.git
+npm install
+double click on StartServer
