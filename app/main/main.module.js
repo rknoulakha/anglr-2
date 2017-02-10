@@ -11,17 +11,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var router_1 = require('@angular/router');
+var forms_1 = require('@angular/forms');
+var http_1 = require('@angular/http');
+var main_component_1 = require('./main.component');
 var home_component_1 = require('../home/home.component');
 var about_component_1 = require('../about/about.component');
-var webservice_component_1 = require('../webservice/webservice.component');
-var main_component_1 = require('./main.component');
+var user_list_component_1 = require('../users/user-list.component');
 var MainModule = (function () {
     function MainModule() {
     }
     MainModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule,
-                router_1.RouterModule.forRoot([
+            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, http_1.HttpModule, http_1.JsonpModule, router_1.RouterModule.forRoot([
                     {
                         path: 'about',
                         component: about_component_1.AboutComponent
@@ -31,12 +32,11 @@ var MainModule = (function () {
                         component: home_component_1.HomeComponent
                     },
                     {
-                        path: 'webservice',
-                        component: webservice_component_1.WebserviceComponent
+                        path: 'users',
+                        component: user_list_component_1.UserListComponent
                     }
-                ])
-            ],
-            declarations: [home_component_1.HomeComponent, about_component_1.AboutComponent, main_component_1.MainComponent, webservice_component_1.WebserviceComponent],
+                ])],
+            declarations: [home_component_1.HomeComponent, about_component_1.AboutComponent, main_component_1.MainComponent, user_list_component_1.UserListComponent],
             bootstrap: [main_component_1.MainComponent]
         }), 
         __metadata('design:paramtypes', [])

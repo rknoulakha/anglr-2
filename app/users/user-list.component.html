@@ -1,0 +1,30 @@
+<h1>Users are :</h1>
+
+<table>
+<th>Id</th>
+<th>Name</th>
+<th>Profession</th>
+<th>DOB</th>
+<th>Country</th>
+<th>State</th>
+<th>City</th>
+<th>Pincodes</th>
+<tr *ngFor="let user of users">
+<td>{{user.id}} </td>
+<td>{{user.name}}</td>
+<td>{{user.profession}}</td>
+<td>{{user.DOB}}</td>
+<td>{{user.address.country}}</td>
+<td>{{user.address.state}}</td>
+<td>{{user.address.city}}</td>
+<td>{{user.address.pincode}}</td>
+</tr>
+</table>
+<p class="error" *ngIf="errorMessage">{{errorMessage}}</p>
+
+
+
+
+
+<p class="error" *ngIf="errorMessage">{{errorMessage}}</p>
+

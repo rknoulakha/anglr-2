@@ -1,40 +1,33 @@
-import { NgModule }      from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule }   from '@angular/router';
+import { NgModule }      			from '@angular/core';
+import { BrowserModule } 			from '@angular/platform-browser';
+import { RouterModule }   			from '@angular/router';
+import { FormsModule }   			from '@angular/forms';
+import { HttpModule, JsonpModule } 	from '@angular/http';
 
-import { HomeComponent }  from '../home/home.component';
-import { AboutComponent }  from '../about/about.component';
-import { WebserviceComponent }  from '../webservice/webservice.component';
-import { MainComponent }  from './main.component';
+import { MainComponent }  			from './main.component';
+import { HomeComponent }  			from '../home/home.component';
+import { AboutComponent }  			from '../about/about.component';
+import { UserListComponent }        from '../users/user-list.component';
 
 
 
 
 @NgModule({
-  imports:      [ BrowserModule 
- 
-  ,
-
- RouterModule.forRoot([
-      
+imports:      [ BrowserModule,FormsModule,HttpModule,JsonpModule,RouterModule.forRoot([      
 	  {
         path: 'about',
         component: AboutComponent
       },
-	   {
+	  {
         path: 'home',
         component: HomeComponent
+      },
+	  {
+        path: 'users',
+        component: UserListComponent
       }
-	  ,
-	   {
-        path: 'webservice',
-        component: WebserviceComponent
-      }
-    ])	
-  
-  
-  ],
-  declarations: [ HomeComponent,AboutComponent,MainComponent,WebserviceComponent ],
-  bootstrap:    [ MainComponent ]
+    ])],
+declarations: [ HomeComponent,AboutComponent,MainComponent,UserListComponent ],
+bootstrap:    [ MainComponent ]
 })
 export class MainModule { }

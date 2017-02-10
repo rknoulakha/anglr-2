@@ -9,18 +9,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var WebserviceComponent = (function () {
-    function WebserviceComponent() {
+var platform_browser_1 = require('@angular/platform-browser');
+var user_list_component_1 = require('./user-list.component');
+var UserListModule = (function () {
+    function UserListModule() {
     }
-    WebserviceComponent = __decorate([
-        core_1.Component({
-            selector: 'my-app',
-            templateUrl: 'app/webservice/webservice.html',
-            styleUrls: ['style/style.css']
+    UserListModule = __decorate([
+        core_1.NgModule({
+            imports: [platform_browser_1.BrowserModule],
+            declarations: [user_list_component_1.UserListComponent]
         }), 
         __metadata('design:paramtypes', [])
-    ], WebserviceComponent);
-    return WebserviceComponent;
+    ], UserListModule);
+    return UserListModule;
 }());
-exports.WebserviceComponent = WebserviceComponent;
-//# sourceMappingURL=webservice.component.js.map
+exports.UserListModule = UserListModule;
+//# sourceMappingURL=user-list.module.js.map
