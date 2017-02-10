@@ -1,7 +1,8 @@
-############## Read Me  ##############
+############## Angular JS 2 With Routing and Rest WS Calling (Http Client) ##############
 
 Install Type Script Package if you don't have.
 
-git clone https://github.com/rknoulakha/anglr-2.git
-npm install
-double click on StartServer
+# git clone https://github.com/rknoulakha/anglr-2.git
+# cd anglr-2
+# npm install
+# double click on StartServer
