@@ -1,0 +1,19 @@
+<h1>Enter New User Details</h1>
+
+
+<table>
+<tr><td><label>Name</label> </td><td><input #name /></td></tr>
+<tr><td><label>Profession</label> </td><td><input #profession /></td></tr>
+<tr><td><label>Country</label> </td><td><input #country /></td></tr>
+<tr><td><label>State</label> </td><td><input #state /></td></tr>
+<tr><td><label>City</label> </td><td><input #city /></td></tr>
+<tr><td><label>Zipcode</label> </td><td><input #pincode /></td></tr>
+<tr><td><button (click)="saveUser(name.value,profession.value,country.value,state.value,city.value,pincode.value)">Save</button></td>
+<td><button (click)="clearUser(name,profession,country,state,city,pincode)">Clear</button></td>
+</tr>
+</table>
+
+
+
+
+<p class="error" *ngIf="errorMessage">{{errorMessage}}</p>

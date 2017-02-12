@@ -1,0 +1,22 @@
+<h1>Update Existing User</h1>
+
+
+<table>
+<tr><td><label>Id</label> </td><td><input #id /></td></tr>
+<tr><td><button (click)="getSingleUser(id.value)">Get User</button></td>
+<td><button (click)="clearUser(id.value)">Clear</button></td>
+</tr>
+</table>
+
+<table>
+<tr><td><label>Name</label> </td><td><input #name /></td></tr>
+<tr><td><label>Profession</label> </td><td><input #profession /></td></tr>
+<tr><td><label>Country</label> </td><td><input #country /></td></tr>
+<tr><td><label>State</label> </td><td><input #state /></td></tr>
+<tr><td><label>City</label> </td><td><input #city /></td></tr>
+<tr><td><label>Zipcode</label> </td><td><input #pincode /></td></tr>
+<tr><td><button (click)="updateUser(name.value,profession.value,country.value,state.value,city.value,pincode.value)">Update</button></td>
+<td><button (click)="clearUser(name,profession,country,state,city,pincode)">Clear</button></td></tr>
+</table>
+
+<p class="error" *ngIf="errorMessage">{{errorMessage}}</p>
